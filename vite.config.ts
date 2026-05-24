@@ -11,5 +11,8 @@ export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
   },
-  plugins: [tenstatic()], // Pre-renders all routes to static HTML
+  plugins: [tenstatic()], // Pre‑renders all routes to static HTML
+  server: {
+    allowedHosts: ["nyotshong.onrender.com"],
+  },
 });
