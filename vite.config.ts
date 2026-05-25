@@ -13,6 +13,3 @@ export default defineConfig({
     server: { entry: "server" },
   },
 });
-
-
-This is my vite.config.ts
