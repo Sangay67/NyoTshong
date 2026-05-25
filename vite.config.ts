@@ -1,11 +1,13 @@
-import { defineConfig } from "@lovable.dev/vite-tanstack-config";
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tsconfigPaths from 'vite-tsconfig-paths'
+import tailwindcss from '@tailwindcss/vite'
 
 export default defineConfig({
-  tanstackStart: {
-    server: { entry: "server" },
-  },
-  // Add this block – it works for both dev and preview
-  server: {
-    allowedHosts: ["nyotshong.onrender.com"],
-  },
-});
+  plugins: [
+    react(),
+    tsconfigPaths(),
+    tailwindcss(),
+  ],
+  // If you need Cloudflare or other custom settings, add them here
+})
